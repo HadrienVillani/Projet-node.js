@@ -1,0 +1,32 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55vh;
+  width: 40vw;
+  flex-direction: column;
+  border: 1px black solid;
+  margin: auto;
+  margin-top: 20vh;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+nav {
+  justify-content: center;
+  display: flex;
+}
+li {
+  list-style: none;
+  padding: 20px;
+}
+a {
+  text-decoration: none;
+  color: grey;
+}
+a:hover {
+  color: blue;
+}

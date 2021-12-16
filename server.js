@@ -7,8 +7,19 @@ const postRoutes = require('./routes/post.routes');
 require('dotenv').config({ path: './config/.env' });
 const { checkUser, requireAuth } = require('./middleware/auth.middleware');
 const dbconnexion = require('./config/db');
+const cors = require('cors');
 
 const app = express();
+const corsOptions = {
+  origin: process.env.CLIENT_URL,
+  credentials: true,
+  allowedHeaders: ['sessionId', 'Content-Type'],
+  exposedHeaders: ['sessionId'],
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  preflightContinue: false,
+};
+
+app.use(cors(corsOptions));
 // sert à traiter la data qui transite
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
