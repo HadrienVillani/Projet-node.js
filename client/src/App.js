@@ -11,7 +11,7 @@ const App = () => {
   //   const fetchToken = async () => {
   //     await axios({
   //       method: 'get',
-  //       url: `${process.env.REACT_APP_API_URL}api/user/:id`,
+  //       url: `${process.env.REACT_APP_API_URL}api/user/jwtid`,
   //       withCredentials: true,
   //     })
   //       .then((res) => {
@@ -21,6 +21,7 @@ const App = () => {
   //   };
   //   fetchToken();
   // }, [uid]);
+
   useEffect(() => {
     setUid(localStorage.getItem('user'));
   }, []);
